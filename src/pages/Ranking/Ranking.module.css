@@ -1,0 +1,8 @@
+.ranking {
+  min-height: 100vh;
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 10px;
+}

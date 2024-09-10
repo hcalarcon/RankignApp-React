@@ -1,0 +1,114 @@
+.visor {
+  position: relative;
+  min-width: 200px;
+  height: 300px;
+  border: solid 1px black;
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  padding: 5px;
+}
+
+.visor p {
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+  text-align: center;
+  word-wrap: break-word;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 100%;
+  opacity: 0;
+  animation: fadeIn 1s ease-in 4s forwards;
+}
+
+.visor article {
+  margin-top: 5px;
+  width: 90%;
+  align-self: flex-end;
+  animation: load 2s 0.5s ease-in forwards;
+  opacity: 0;
+}
+
+.visor article:nth-child(2) {
+  background: rgb(0, 21, 255);
+  height: 75%;
+}
+
+.visor article:nth-child(3) {
+  background: rgb(0, 213, 255);
+  height: 85%;
+}
+
+.visor article:last-child {
+  background: rgb(255, 162, 0);
+  height: 65%;
+}
+
+.visor article p:first-child {
+  animation-delay: 1s;
+}
+
+.visor article p:last-child {
+  animation-delay: 1.5s;
+}
+
+.rankingTitle {
+  position: absolute;
+  width: 100%;
+  top: 5px;
+  left: 50%;
+  padding: 8px;
+  transform: translateX(-50%);
+  font-size: 24px;
+  color: #333;
+  background: rgba(161, 160, 160, 0.534);
+  transition: opacity 0.2s;
+  opacity: 0;
+}
+
+@keyframes load {
+  from {
+    height: 0;
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.visor article p:first-child {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 10px;
+  height: 10px;
+  background-color: #ff6347; /* Color de fondo */
+  border-radius: 50%; /* Hacerlo circular */
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  animation: growCircle 1s ease-in-out forwards; /* Animación de crecimiento */
+}
+
+@keyframes growCircle {
+  from {
+    transform: scale(0); /* Comienza desde el centro */
+  }
+  to {
+    width: 50px;
+    height: 50px;
+    transform: scale(1); /* Se expande al tamaño completo */
+  }
+}

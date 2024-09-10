@@ -1,0 +1,19 @@
+.container {
+  background-image: url("/public/fondo-login.jpeg");
+  height: 100vh;
+  align-content: center;
+}
+
+.title {
+  text-align: center;
+  padding: 8px;
+}
+
+.formContainer {
+  background-color: aliceblue;
+  margin: auto;
+  width: 300px;
+  height: 300px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 15px 5px rgb(97, 95, 95);
+}
