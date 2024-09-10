@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
-import HeaderCss from "../styles/header.module.css";
+import HeaderCss from "../styles/Header.module.css";
 import { Link } from "react-router-dom";
 
 const Header = (props) => {
