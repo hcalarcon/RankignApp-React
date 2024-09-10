@@ -1,4 +1,4 @@
-import Pb from "../styles/Progressbar.module.css";
+import Pb from "../styles/ProgressBar.module.css";
 
 const ProgressBar = (props) => {
   const { nombre, color, username, proyecto, rate } = props;
