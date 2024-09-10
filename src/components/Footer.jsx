@@ -17,12 +17,12 @@ const Footer = () => {
         <h4>Contacto</h4>
         <p>Email: info@patagoniandevs.com.ar</p>
         <p>Teléfono: +54 364 427 7105</p>
-        <address>San Matín de los Andes</address>
+        <address>San Martín de los Andes</address>
         <address>Patagonia - Argentina</address>
       </section>
       <section className={styles.section}>
         <article>
-          <p>&copy; 2024 Cristian Alarcón</p>
+          <p>&copy; 2024 Hernaldo Cristian Alarcón</p>
           <p>Todos los derechos reservados</p>
         </article>
 

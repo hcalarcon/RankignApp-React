@@ -7,7 +7,7 @@ const ProgressBar = (props) => {
 
   return (
     <section className={Pb.contentProgressBar}>
-      {nombre}
+      <p>{nombre}</p>
       <ol className={Pb.list}>
         <li>Username: {username}</li>
         <li>Proyecto: {proyecto}</li>
@@ -16,7 +16,7 @@ const ProgressBar = (props) => {
         className={Pb.barra}
         style={{ width: `${barraAncho}% `, background: `${color}` }}
       >
-        <p>{rate}0%</p>
+        <p>{rate < 10 ? rate * 10 : rate}%</p>
       </article>
     </section>
   );
