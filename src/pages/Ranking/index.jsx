@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import styles from "./Ranking.module.css";
-import ProgressBar from "../../components/progressbar";
+import ProgressBar from "../../components/Progressbar.jsx";
 import ProgressBarColors from "../../constants/color";
 import getPerson from "../../apis/getPerson";
 
