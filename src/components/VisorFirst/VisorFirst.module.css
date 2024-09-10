@@ -6,7 +6,7 @@
   display: flex;
   gap: 15px;
   justify-content: center;
-  padding: 5px;
+  padding: 10px;
 }
 
 .visor p {
@@ -20,14 +20,14 @@
   white-space: nowrap;
   max-width: 100%;
   opacity: 0;
-  animation: fadeIn 1s ease-in 4s forwards;
+  animation: fadeIn 0.5s ease-in 1s forwards;
 }
 
 .visor article {
   margin-top: 5px;
   width: 90%;
   align-self: flex-end;
-  animation: load 2s 0.5s ease-in forwards;
+  animation: load 1.5s 0.5s ease-in forwards;
   opacity: 0;
 }
 
@@ -42,7 +42,7 @@
 }
 
 .visor article:last-child {
-  background: rgb(255, 162, 0);
+  background: rgb(51, 236, 30);
   height: 65%;
 }
 
@@ -64,8 +64,7 @@
   font-size: 24px;
   color: #333;
   background: rgba(161, 160, 160, 0.534);
-  transition: opacity 0.2s;
-  opacity: 0;
+  transition: opacity 0.1s;
 }
 
 @keyframes load {
@@ -89,26 +88,29 @@
 }
 
 .visor article p:first-child {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 10px;
-  height: 10px;
-  background-color: #ff6347; /* Color de fondo */
+  position: relative;
+  align-content: center;
+  bottom: 8px;
+  right: 8px;
+  width: 50px;
+  height: 50px;
+  background-color: #fbf720; /* Color de fondo */
   border-radius: 50%; /* Hacerlo circular */
-  color: white;
+  color: rgb(0, 0, 0);
   font-size: 20px;
   font-weight: bold;
-  animation: growCircle 1s ease-in-out forwards; /* Animación de crecimiento */
+  transform-origin: center;
+  box-shadow: 1px 1px 2px 1.5px rgb(58, 56, 56);
+  animation: asd 1.5s ease forwards 2s;
 }
 
-@keyframes growCircle {
+@keyframes asd {
   from {
+    opacity: 0;
     transform: scale(0); /* Comienza desde el centro */
   }
   to {
-    width: 50px;
-    height: 50px;
-    transform: scale(1); /* Se expande al tamaño completo */
+    opacity: 1;
+    transform: scale(1);
   }
 }
