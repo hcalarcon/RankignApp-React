@@ -11,11 +11,6 @@ const Home = () => {
       try {
         const persons = await getPerson();
         const data = await persons.slice(0, 3);
-        // const data = [
-        //   { nombre: "juan" },
-        //   { nombre: "juan" },
-        //   { nombre: "juan" },
-        // ];
         setFirstPersons(data);
       } catch (error) {
         console.log(error);

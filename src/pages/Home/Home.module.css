@@ -1,7 +1,5 @@
 .Home {
   padding: 15px;
-  padding-top: 25px;
-  margin-top: 50px;
   box-sizing: border-box;
   width: 100%;
   min-height: 100vh;
@@ -18,6 +16,7 @@
 }
 
 .desc {
+  margin-top: 50px;
   width: 50%;
   min-width: 350px;
   min-height: 50vh;
@@ -31,7 +30,7 @@
 .Home::before {
   content: "";
   position: absolute;
-  top: 50px;
+  top: 0;
   left: 0;
   right: 0;
   bottom: 0;

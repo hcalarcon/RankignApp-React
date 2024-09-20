@@ -2,13 +2,18 @@
   width: 100%;
   display: grid;
   height: 50px;
-  background-color: var(--color-secundary);
   grid-template-columns: 1fr 3fr 1fr;
   text-align: center;
   box-sizing: content-box;
   box-shadow: 0 4px 10px -4px rgba(82, 86, 200, 0.5);
   position: fixed;
+  transition: background-color 0.3s ease;
   z-index: 1000;
+  background-color: transparent;
+}
+
+.scrolled {
+  background-color: var(--color-secundary);
 }
 
 .titulo {

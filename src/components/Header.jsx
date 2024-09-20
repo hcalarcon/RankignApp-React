@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 
 const Header = (props) => {
   const [isOpen, setIsOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
   const menu = useRef(null);
 
   const toggleMenu = () => {
@@ -16,12 +17,20 @@ const Header = (props) => {
         setIsOpen(false); // Cierra el menú si se hace clic fuera
       }
     };
+
+    const handleScroll = () => {
+      const scrollY = window.scrollY;
+      setIsScrolled(scrollY > 60);
+    };
+
     // Agregar el evento de clic al documento
     document.addEventListener("mousedown", handleClickOutside);
+    window.addEventListener("scroll", handleScroll);
 
     // Limpieza del evento cuando el componente se desmonta
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
+      window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
@@ -29,7 +38,11 @@ const Header = (props) => {
 
   return (
     <>
-      <header className={HeaderCss.encabezado}>
+      <header
+        className={`${HeaderCss.encabezado} ${
+          isScrolled ? HeaderCss.scrolled : ""
+        }`}
+      >
         <img src="/logo.jpg" alt="" className={HeaderCss.logo} />
         <h1 className={HeaderCss.titulo}>Ranking App</h1>
 

@@ -6,3 +6,8 @@
   gap: 5px;
   padding: 10px;
 }
+
+.ranking h5 {
+  color: rgb(224, 221, 221);
+  padding: 5px;
+}
