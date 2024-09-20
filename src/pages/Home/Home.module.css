@@ -34,7 +34,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-image: url("./fondoprueba2.jpeg");
+  background-image: url("/fondoprueba.jpeg");
   background-size: cover;
   background-position: center;
   z-index: -1;

@@ -2,8 +2,6 @@ import { CircularProgress } from "@mui/material";
 import style from "./VisorFirst.module.css";
 
 const VisorFrist = ({ primeros, isLoading, title = "6° 5°" }) => {
-  console.log(primeros);
-
   const orden = [2, 1, 3];
   const reorderedPrimeros = [
     primeros[1] || {}, // Second article
